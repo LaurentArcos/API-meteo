@@ -3,32 +3,31 @@ import { Card, Image } from 'semantic-ui-react';
 
 function MeteoResults({ meteo }) {
   return (
-    <Card.Group itemsPerRow={3}>
-      {meteo.map((meteoData) => (
-        <Card key={meteoData.location.timezone_id}>
-          <Image
-            src={meteoData.current.weather_icons}
-            wrapped
-            ui={false}
-            alt="Meteo image"
-          />
-          <Card.Content>
-            <Card.Header>
-              {meteoData.location.name}
-            </Card.Header>
-            <Card.Meta>{meteoData.weather_descriptions}</Card.Meta>
-            <Card.Description>
-              {meteoData.current.temperature}
-            </Card.Description>
-          </Card.Content>
-        </Card>
-      ))}
-    </Card.Group>
+    <Card centered className="card">
+      <Image
+        src={meteo.current.weather_icons}
+        wrapped
+        ui={false}
+        alt="Meteo image"
+      />
+      <Card.Content>
+        <Card.Header>
+          {meteo.location.name}
+        </Card.Header>
+        <Card.Meta>{meteo.weather_descriptions}</Card.Meta>
+        <Card.Description>
+          {meteo.current.temperature}
+        </Card.Description>
+      </Card.Content>
+    </Card>
   );
 }
 
 MeteoResults.propTypes = {
-  meteo: PropTypes.arrayOf.isRequired,
+  meteo: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]).isRequired,
 };
 
 export default MeteoResults;
