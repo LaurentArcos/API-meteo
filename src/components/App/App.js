@@ -38,8 +38,7 @@ function App() {
         setSearch={setSearch}
         fetchResults={fetchResults}
       />
-      <MessageBar search={search} />
-      {contentReady && <MeteoResults meteo={meteoDatas} />}
+      {contentReady && <MeteoResults meteo={meteoDatas} search={search}/>}
     </div>
   );
 }
