@@ -5,8 +5,8 @@ import './styles.scss';
 
 import Header from '../Header/Header';
 import SearchBar from '../Searchbar/Searchbar';
-import MessageBar from '../MessageBar/MessageBar';
 import MeteoResults from '../MeteoResults/MeteoResults';
+import NotFound from '../NotFound/NotFound';
 
 function App() {
   const [meteoDatas, setMeteoDatas] = useState([]);
@@ -38,7 +38,7 @@ function App() {
         setSearch={setSearch}
         fetchResults={fetchResults}
       />
-      {contentReady && <MeteoResults meteo={meteoDatas} search={search}/>}
+      {contentReady && <MeteoResults meteo={meteoDatas} />}
     </div>
   );
 }

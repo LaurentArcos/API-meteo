@@ -28,3 +28,27 @@ img {
   font-weight: bold;
 }
 
+/**===========================================*/
+/**               Media Queries               */
+/**===========================================*/
+
+/** width 1330 --> 1399*/
+@media screen and (max-width: 760px) {
+  .app {
+    width: 80vw;
+  }
+  
+  img {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1400px) {
+  .app {
+    width: 50vw;
+  }
+  
+  img {
+    width: 50vw;
+  }
+}
