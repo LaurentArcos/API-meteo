@@ -5,7 +5,7 @@ import MessageBar from '../MessageBar/MessageBar';
 function MeteoResults({ meteo, search }) {
   return (
     <div>
-      <MessageBar search={search} />
+      <MessageBar search={search} meteo={meteo} />
       <Card centered className="card">
         <Image
           src={meteo.current.weather_icons}
@@ -15,10 +15,13 @@ function MeteoResults({ meteo, search }) {
         />
         <Card.Content>
           <Card.Header>
-            {meteo.location.name}
+            {meteo.location.name} 
           </Card.Header>
-          <Card.Meta>{meteo.weather_descriptions}</Card.Meta>
+          <Card.Meta>({meteo.location.region}, {meteo.location.country})</Card.Meta>
           <Card.Description>
+            {meteo.current.weather_descriptions}
+          </Card.Description>
+          <Card.Description >
             {meteo.current.temperature}°c
           </Card.Description>
         </Card.Content>
