@@ -16,7 +16,7 @@ function MeteoResults({ meteo }) {
         </Card.Header>
         <Card.Meta>{meteo.weather_descriptions}</Card.Meta>
         <Card.Description>
-          {meteo.current.temperature}
+          {meteo.current.temperature}°c
         </Card.Description>
       </Card.Content>
     </Card>
