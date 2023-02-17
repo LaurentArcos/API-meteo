@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { Card, Image } from 'semantic-ui-react';
 import MessageBar from '../MessageBar/MessageBar';
 
-function MeteoResults({ meteo, search }) {
+function MeteoResults({ meteo }) {
   return (
     <div>
-      <MessageBar search={search} meteo={meteo} />
+      <MessageBar meteo={meteo} />
       <Card centered className="card">
         <Image
           src={meteo.current.weather_icons}
@@ -35,7 +35,6 @@ MeteoResults.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]).isRequired,
-  search: PropTypes.string.isRequired,
 };
 
 export default MeteoResults;

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { Message } from 'semantic-ui-react';
 
-function MessageBar({ search, meteo }) {
+function MessageBar({ meteo }) {
   return (
     <Message>
-      There is the weather in {meteo.location.name} ({meteo.location.country}) "
+      Currently the weather in {meteo.location.name} ({meteo.location.country}) is :
     </Message>
   );
 }
@@ -14,7 +14,6 @@ MessageBar.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]).isRequired,
-  search: PropTypes.string.isRequired,
 };
 
 export default MessageBar;
