@@ -18,7 +18,7 @@ function SearchBar({ search, setSearch, fetchResults }) {
             onChange={(event) => setSearch(event.target.value)}
             icon="search"
             iconPosition="left"
-            placeholder="Recherche..."
+            placeholder="Search a city and find out what's the weather like there !"
           />
         </Form.Field>
       </Form>
