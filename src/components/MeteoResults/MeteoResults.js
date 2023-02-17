@@ -14,15 +14,15 @@ function MeteoResults({ meteo, search }) {
           alt="Meteo image"
         />
         <Card.Content>
-          <Card.Header>
-            {meteo.location.name} 
-          </Card.Header>
-          <Card.Meta>({meteo.location.region}, {meteo.location.country})</Card.Meta>
-          <Card.Description>
-            {meteo.current.weather_descriptions}
+          <Card.Description className="city-name">
+            {meteo.location.name}
           </Card.Description>
-          <Card.Description >
+          <Card.Meta>({meteo.location.region}, {meteo.location.country})</Card.Meta>
+          <Card.Description className="temperature">
             {meteo.current.temperature}°c
+          </Card.Description>
+          <Card.Description className="weather-description">
+            {meteo.current.weather_descriptions}
           </Card.Description>
         </Card.Content>
       </Card>

@@ -1,3 +1,7 @@
+body {
+  background-color:rgb(233, 251, 255);
+}
+
 .app {
   width: 30vw;
   margin: 1em auto;
@@ -7,3 +11,20 @@
 img {
   width: 25vw;
 }
+
+.city-name {
+  font-size: 2.7rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.weather-description {
+  font-size: 1.3rem;
+}
+
+.temperature {
+  padding: 1.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
