@@ -1,3 +1,3 @@
-# API-meteo
+# test d'application météo
 
-Application de recherche et d'affichafe de prévisions météo avec une connexion à une API
+mis en ligne [avec ce repo](https://github.com/LaurentArcos/Whats-the-weather-like-)
